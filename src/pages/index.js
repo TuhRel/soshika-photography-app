@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { GlobalStyle } from "../styles/GlobalStyle"
 import AboutSection from "../components/About"
 import ServicesSection from "../components/Services"
+import PortfolioSection from "../components/PortfolioSection"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
+        <PortfolioSection />
       </Layout>
     </>
   )

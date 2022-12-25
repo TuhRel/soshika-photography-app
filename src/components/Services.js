@@ -7,6 +7,7 @@ const ServicesContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: #f9f9f9;
 `
 const ServicesContent = styled.div``
 

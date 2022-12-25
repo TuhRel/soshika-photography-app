@@ -7,12 +7,13 @@ const HeroContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: #f9f9f9;
 `
 const HeroContent = styled.div``
 
 const HeroSection = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroContent>
         <h3 style={{ color: '#17141f' }}>Hero Section</h3>
       </HeroContent>
