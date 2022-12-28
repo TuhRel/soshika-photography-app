@@ -19,7 +19,8 @@ const HeroContainer = styled.div`
     right: 0;
     bottom: 80px;
     backdrop-filter: blur(3px);
-    background: linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%), linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%);
+    /* background: linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%), linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%); */
+    background: #f9f9f999;
     z-index: 2;
     }
 `
@@ -85,7 +86,8 @@ const HeroText = styled.div`
     font-size: 1.8rem;
     font-weight: 200;
     letter-spacing: 2px;
-    font-family: 'Bad Script';
+    line-height: 3rem;
+    /* font-family: 'Bad Script'; */
   }
 `
 
@@ -110,7 +112,7 @@ const HeroSection = () => {
   return (
     <HeroContainer id='home'>
         <HeroBg>
-          <VideoBg src={require('../images/weddingSlides/gabby_wedding_1.webp').default} />
+          <VideoBg src={require('../images/backgroundImages/heroBackground.jpg').default} />
         </HeroBg>
       <HeroContentWrapper>
         <HeroContent>

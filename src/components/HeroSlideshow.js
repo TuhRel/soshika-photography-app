@@ -40,13 +40,13 @@ const Slideshow = [
   //   image: require('../images/weddingSlides/gabby_wedding_2.webp').default,
   // },
   {
-    image: require('../images/weddingSlides/hillary_wedding_1.webp').default,
+    image: require('../images/heroSectionImages/bijou-wedding-3.jpg').default,
   },
   {
-    image: require('../images/weddingSlides/hillary_wedding_2.webp').default,
+    image: require('../images/heroSectionImages/bijou-wedding-1.jpg').default,
   },
   {
-    image: require('../images/weddingSlides/hillary_wedding_2.webp').default,
+    image: require('../images/heroSectionImages/bijou-wedding-2.jpg').default,
   },
 ];
 
