@@ -12,7 +12,7 @@ export const PortfolioContainer = styled.div`
 export const PortfolioWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    height: 100vh;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -24,6 +24,7 @@ export const PortfolioWrapper = styled.div`
 export const PortfolioRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
+    grid-column-gap: 25px;
     align-items: center;
     grid-template-areas: ${({ imgStart }) => 
         imgStart ? `'col2 col1'` : `'col1 col2'`

@@ -1,5 +1,5 @@
 export const portfolioObjOne = {
-  id: 'wedding',
+  id: 'wedding-photography',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -16,7 +16,7 @@ export const portfolioObjOne = {
 }
 
 export const portfolioObjTwo = {
-  id: 'portrait',
+  id: 'portrait-photography',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -33,18 +33,52 @@ export const portfolioObjTwo = {
 }
 
 export const portfolioObjThree = {
-  id: 'signup',
+  id: 'branding-lifestyle-photography',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Join our Team',
-  headLine: 'Creating an account is extremely easy.',
-  description: "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
-  buttonLabel: 'Start Now',
-  imgStart: false,
+  topLine: 'Branding & Lifestyle',
+  headLine: 'Want photos to promote your brand?',
+  description: "View branding and lifestyle gallery",
+  buttonLabel: 'View Gallery',
+  imgStart: true,
   // img: require('../../images/dolla_files.svg').default,
   alt: 'papers',
-  dark: false,
-  primary: false,
+  dark: true,
+  primary: true,
+  darkText: true
+}
+
+export const portfolioObjFour = {
+  id: 'couple-engagement-portraits',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Couple & Engagement Portraits',
+  headLine: 'Want photos to promote your brand?',
+  description: "View branding and lifestyle gallery",
+  buttonLabel: 'View Gallery',
+  imgStart: true,
+  // img: require('../../images/dolla_files.svg').default,
+  alt: 'papers',
+  dark: true,
+  primary: true,
+  darkText: true
+}
+
+export const portfolioObjFive = {
+  id: 'editorial-fashion-photography',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Editorial & Fashion Photography',
+  headLine: 'Want photos to promote your brand?',
+  description: "View branding and lifestyle gallery",
+  buttonLabel: 'View Gallery',
+  imgStart: true,
+  // img: require('../../images/dolla_files.svg').default,
+  alt: 'papers',
+  dark: true,
+  primary: true,
   darkText: true
 }

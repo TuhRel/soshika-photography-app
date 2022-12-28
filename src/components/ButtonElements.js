@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from 'react-scroll'
+import { Link } from 'gatsby'
 
 export const Button = styled(Link)`
     border-radius: 10px;
@@ -10,6 +10,7 @@ export const Button = styled(Link)`
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
     border: 1px solid #17141f;
+    text-decoration: none;
     cursor: pointer;
     display: flex;
     justify-content: center;

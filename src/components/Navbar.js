@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
@@ -10,8 +10,13 @@ const Nav = styled.nav`
   padding: 0 50px;
   position: fixed;
   top: 0;
-  background-color: #f9f9f920;
+  background-color: transparent;
   backdrop-filter: blur(5px);
+  z-index: 1100;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `
 const NavContainer = styled.div`
   display: flex;
@@ -19,6 +24,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  width: 100%;
 `
 const NavLogo = styled(Link)`
   color: #17141f;
@@ -34,13 +40,24 @@ const NavMenuContainer = styled.div`
 `
 const Burger = styled.div`
   display: none;
-  /* font-size: 1.8rem;
-  margin-top: -5px;
-  color: #17141f;
-  cursor: pointer; */
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    color: #17141f;
+    cursor: pointer;
+  }
 `
 const NavMenu = styled.div`
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 const NavMenuItem = styled.div``
 // const NavLink = styled(Link)`
@@ -71,16 +88,18 @@ const NavBtnLink = styled(Link)`
   border-radius: 10px;
   text-decoration: none;
   color: #17141f;
+  transition: all 0.2s ease-in-out;
 
   &:hover{
     background-color: #17141f20;
+    transition: all 0.2s ease-in-out;
   }
 `
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
-}
+  }
 
   return (
     <Nav>
@@ -90,7 +109,7 @@ const Navbar = () => {
           {/* <div style={{ fontFamily: 'Bad Script', paddingLeft: '15px' }}>Photography</div> */}
         </NavLogo>
         <NavMenuContainer>
-          <Burger>
+          <Burger onClick={toggle}>
             <FaBars />
           </Burger>
           <NavMenu>

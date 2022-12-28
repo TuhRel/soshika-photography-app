@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout';
 import { GlobalStyle } from '../styles/GlobalStyle';
 import PortfolioLayout from '../components/portfolioPageComponents/PortfolioLayout';
-import { portfolioObjOne, portfolioObjTwo } from '../components/portfolioPageComponents/data';
+import { portfolioObjFive, portfolioObjFour, portfolioObjOne, portfolioObjThree, portfolioObjTwo } from '../components/portfolioPageComponents/data';
 
 
 const Portfolio = () => {
@@ -11,7 +11,10 @@ const Portfolio = () => {
     <GlobalStyle />
     <Layout>
       <PortfolioLayout {...portfolioObjOne}/>
+      <PortfolioLayout {...portfolioObjFour}/>
       <PortfolioLayout {...portfolioObjTwo}/>
+      <PortfolioLayout {...portfolioObjThree}/>
+      <PortfolioLayout {...portfolioObjFive}/>
     </Layout>
     </>
   )
