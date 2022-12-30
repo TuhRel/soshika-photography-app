@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PortfolioContainer, PortfolioWrapper, PortfolioRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img } from './PortfolioElements'
+import { PortfolioContainer, PortfolioWrapper, PortfolioRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap } from './PortfolioElements'
 import { Button } from '../ButtonElements'
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
@@ -28,7 +28,7 @@ const images = [
     },
   ];
 
-const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2 }) => {
+const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, primary, dark, dark2 }) => {
 
     const theme = useTheme()
 

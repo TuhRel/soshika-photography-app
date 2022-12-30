@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
@@ -77,6 +77,7 @@ const NavScrollLink = styled(LinkS)`
 
   &:hover {
     border-bottom: 1px solid #17141f;
+    transition: all ease-in-out;
   }
 `
 const NavMenuBtn = styled.div`

@@ -8,8 +8,6 @@ const HeroContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  /* background-color: #f9f9f9; */
-  /* background-image: url('../images/weddingSlides/gabby_wedding_1.webp'); */
 
   :before {
     content: '';
@@ -28,11 +26,10 @@ const HeroBg = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 80px;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: calc(100vh - 80px);
-    overflow: hidden;
 `
 const VideoBg = styled.img`
     width: 100%;
@@ -40,6 +37,7 @@ const VideoBg = styled.img`
     -o-object-fit: cover;
     object-fit: cover;
     background: #f9f9f9;
+    overflow: hidden;
 `
 const HeroContentWrapper = styled.div`
   display: grid;
@@ -87,27 +85,11 @@ const HeroText = styled.div`
     font-weight: 200;
     letter-spacing: 2px;
     line-height: 3rem;
-    /* font-family: 'Bad Script'; */
   }
 `
 
 
 const HeroSection = () => {
-
-  // const theme = useTheme()
-
-  // const [activeStep, setActiveStep] = useState(0)
-  // const handleNext = () => {
-  //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  // };
-  // const handleBack = () => {
-  //     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  // };
-  // const handleStepChange = (step) => {
-  //     setActiveStep(step);
-  // };
-
-
 
   return (
     <HeroContainer id='home'>
@@ -117,31 +99,6 @@ const HeroSection = () => {
       <HeroContentWrapper>
         <HeroContent>
           <HeroSlideshow />
-          {/* <Box sx={{maxWidth: '100%', textAlign: 'center', display: 'flex'}}>
-            {HeroSlideshow.map((slide) => (
-              <Box sx={{maxWidth: '33.33%', objectFit: 'cover'}}>
-              <img src={slide.image} alt='pic' style={{maxWidth: '100%', height: '300px', padding: '0 5px', overflow: 'hidden'}} />
-              </Box>
-            ))}
-          </Box> */}
-          {/* {HeroSlideshow.map((slide) => {
-            <Box
-            component="img"
-            sx={{
-            height: '100%',
-            display: 'block',
-            maxWidth: '33.33%',
-            objectFit: 'cover',
-            // objectPosition: '0 80%',
-            overflow: 'scroll',
-            // width: '100%',
-            }}
-            src={slide.image}
-            alt='pic'/>
-            <>
-            <img src={slide.image} alt='pic' style={{objectFit: 'cover', width: '33.33%', height: '100%'}}/>
-            </>
-          })} */}
         </HeroContent>
         <HeroContent style={{paddingTop: '60px'}}>
           <HeroText>
