@@ -22,7 +22,7 @@ const HeroSlideshow = () => {
       {Slideshow.map((slide, index) => {
         return (
           <Box sx={{maxWidth: '33.33%', objectFit: 'cover'}} key={index}>
-            <img src={slide.image} alt='pic' style={{maxWidth: '100%', padding: '0 10px', height: 400}} />
+            <img src={slide.image} alt='pic' style={{maxWidth: '100%', padding: '0 10px', maxHeight: 500}} />
           </Box>
         )
       })}

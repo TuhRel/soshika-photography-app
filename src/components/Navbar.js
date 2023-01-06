@@ -86,7 +86,6 @@ const NavMenuBtn = styled.div`
 const NavBtnLink = styled(Link)`
   padding: 10px;
   border: 1px solid #17141f;
-  border-radius: 10px;
   text-decoration: none;
   color: #17141f;
   transition: all 0.2s ease-in-out;

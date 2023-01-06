@@ -1,43 +1,36 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import HeroSlideshow from './HeroSlideshow';
+import heroImage from '../images/backgroundImages/heroBackground-2.jpg'
 
 const HeroContainer = styled.div`
   display: flex;
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 80px;
-    backdrop-filter: blur(3px);
-    /* background: linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%), linear-gradient(180deg, #f9f9f920 0%, #f9f9f960 100%); */
-    background: #f9f9f999;
-    z-index: 2;
-    }
+  background-image: url(${heroImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 `
 const HeroBg = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    background-color: #f9f9f999;
 `
-const VideoBg = styled.img`
+const HeroBg2 = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #f9f9f9;
-    overflow: hidden;
+    height: 100vh;
+    background-color: #f9f9f999;
 `
 const HeroContentWrapper = styled.div`
   display: grid;
@@ -93,9 +86,8 @@ const HeroSection = () => {
 
   return (
     <HeroContainer id='home'>
-        <HeroBg>
-          <VideoBg src={require('../images/backgroundImages/heroBackground.jpg').default} />
-        </HeroBg>
+      <HeroBg>
+        <HeroBg2>
       <HeroContentWrapper>
         <HeroContent>
           <HeroSlideshow />
@@ -110,6 +102,8 @@ const HeroSection = () => {
           </HeroText>
         </HeroContent>
       </HeroContentWrapper>
+      </HeroBg2>
+      </HeroBg>
     </HeroContainer>
   )
 }
