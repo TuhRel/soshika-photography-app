@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+import PortfolioSlideshow from './portfolioSlideshow';
 
 const PortfolioSectionContainer = styled.div`
   display: flex;
@@ -30,6 +31,7 @@ const AboutSection = () => {
     <PortfolioSectionContainer id='portfolio-preview'>
       <PortfolioSectionContent>
         <h3 style={{ color: '#17141f', padding: '5px', fontWeight: '400' }}>Portfolio Section</h3>
+        <PortfolioSlideshow />
         <Button to='/portfolio'>Full Portfolio</Button>
       </PortfolioSectionContent>
     </PortfolioSectionContainer>

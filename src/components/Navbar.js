@@ -118,21 +118,27 @@ const Navbar = ({ toggle }) => {
                 smooth={true}
                 duration={500}
                 spy={true}
-                exact='true'>About</NavScrollLink>
+                exact='true'>
+                  The Photographer
+              </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
               <NavScrollLink to='services'
                 smooth={true}
                 duration={500}
                 spy={true}
-                exact='true'>Services</NavScrollLink>
+                exact='true'>
+                  The Business
+              </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
               <NavScrollLink to='portfolio-preview'
                 smooth={true}
                 duration={500}
                 spy={true}
-                exact='true'>Portfolio</NavScrollLink>
+                exact='true'>
+                  The Portfolio
+              </NavScrollLink>
             </NavMenuItem>
             <NavMenuBtn>
               <NavBtnLink to='/book-now'>Get a Quote</NavBtnLink>

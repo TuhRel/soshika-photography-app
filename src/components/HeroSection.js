@@ -35,8 +35,9 @@ const HeroBg2 = styled.div`
 const HeroContentWrapper = styled.div`
   display: grid;
   width: 95%;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   padding-top: 50px;
+  margin-left: -125px;
 `
 const HeroContent = styled.div`
   display: flex;
@@ -87,7 +88,7 @@ const HeroSection = () => {
   return (
     <HeroContainer id='home'>
       <HeroBg>
-        <HeroBg2>
+      <HeroBg2>
       <HeroContentWrapper>
         <HeroContent>
           <HeroSlideshow />
