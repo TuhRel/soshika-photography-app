@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Box from '@mui/material/Box'
+import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const PortfolioSlideshowContainer = styled.div`
   width: 100%;
@@ -29,16 +31,32 @@ const Slideshow = [
 ]
 
 const PortfolioSlideshow = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allFile(filter: {relativeDirectory: {eq: "portfolioSlideshow"}}) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(
+            formats: AUTO, 
+            height: 1200, 
+            placeholder: BLURRED
+          )
+        }
+      }
+    }
+  }
+  `)
+
   return (
-    <PortfolioSlideshowContainer>
-      <Box sx={{overflow: 'scroll', display: 'flex', flexDirection: 'row', maxWidth: '1200px'}}>
-        {Slideshow.map((item, index) => {
+    <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'scroll', height: '800px'}}>
+        {data?.allFile?.nodes?.map((image, index) => {
           return (
-            <img src={item.image} alt='slideshow' style={{maxHeight: '500px'}} key={index}/>
+            <Box sx={{display: 'flex', flexDirection: 'row', width: '100%', objectFit: 'cover'}} key={index}>
+            <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt='slideshow'/>
+            </Box>
           )
         })}
-      </Box>
-    </PortfolioSlideshowContainer>
+    </Box>
   )
 }
 
