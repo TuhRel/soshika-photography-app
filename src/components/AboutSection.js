@@ -8,9 +8,9 @@ import aboutImage from '../images/backgroundImages/aboutBackground.jpg'
 
 const AboutContainer = styled.div`
   display: flex;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 100%;
-  /* padding-top: 80px; */
   justify-content: center;
   align-items: center;
   background-image: url(${aboutImage});
@@ -25,7 +25,7 @@ const AboutBg = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     backdrop-filter: blur(3px);
     background-color: #f9f9f999;
 `
@@ -34,7 +34,7 @@ const AboutBg2 = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #f9f9f999;
 `
 const AboutWrapper = styled.div`
@@ -42,15 +42,17 @@ const AboutWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 550px;
+  height: max-content;
   width: 100%;
   background-color: #f9f9f9;
-  margin-top: 60px;
+  margin-top: 8%;
 `
 const AboutSectionTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: underline 1px;
+  padding: 20px 0;
 
   h2 {
     /* font-family: 'Bad Script', sans-serif; */
@@ -60,9 +62,8 @@ const AboutSectionTitle = styled.div`
 const AboutContentWrapper = styled.div`
   display: grid;
   width: 95%;
-  /* max-height: 500px; */
+  height: 100%;
   grid-template-columns: 40% 60%;
-  grid-column-gap: 10px black;
   align-self: center;
   align-items: center;
 `
@@ -100,9 +101,11 @@ const AboutSection = () => {
       <AboutBg>
       <AboutBg2>
       <AboutWrapper>
-      <AboutSectionTitle>
-        <h2>A little about me...</h2>
-      </AboutSectionTitle>
+        <AboutContent>
+          <AboutSectionTitle>
+            <h2>A little about me...</h2>
+          </AboutSectionTitle>
+        </AboutContent>
       <AboutContentWrapper>
         <AboutContent style={{alignItems: 'center', justifyContent: 'center'}}>
           <p style={{ color: '#17141f' }}>{AboutData}</p>
@@ -115,6 +118,25 @@ const AboutSection = () => {
               </Box>
             )
           })}
+        </AboutContent>
+      </AboutContentWrapper>
+      <AboutSectionTitle>
+        <h2>
+          About SoShika Photography
+        </h2>
+      </AboutSectionTitle>
+        <AboutContentWrapper style={{ gridTemplateColumns: '60% 40%'}}>
+        <AboutContent style={{alignItems: 'center', justifyContent: 'center'}}>
+          {data?.allFile?.nodes?.map((image, index) => {
+            return (
+              <Box sx={{display: 'flex', alignSelf: 'center', justifyContent: 'center', width: '45%', height: '100%', padding: '0 5px'}} key={index}>
+                <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt='alt'/>
+              </Box>
+            )
+          })}
+        </AboutContent>
+        <AboutContent style={{alignItems: 'center', justifyContent: 'center'}}>
+          <p style={{ color: '#17141f' }}>{AboutData}</p>
         </AboutContent>
       </AboutContentWrapper>
       </AboutWrapper>

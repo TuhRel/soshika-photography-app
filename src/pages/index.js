@@ -11,7 +11,7 @@ const Home = () => {
       <Layout>
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
+        {/* <ServicesSection /> */}
         <PortfolioSection />
       </Layout>
     </>

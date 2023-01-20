@@ -2,26 +2,40 @@ import React from 'react'
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import PortfolioSlideshow from './portfolioSlideshow';
+import { IoIosArrowRoundForward } from 'react-icons/io'
 
 const PortfolioSectionContainer = styled.div`
   display: flex;
-  height: calc(100vh - 80px);
+  position: relative;
+  height: 100vh;
+  /* height: calc(100vh - 80px); */
   width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
 `
 const PortfolioSectionContent = styled.div``
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 const Button = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 5px;
   padding: 5px;
-  border: 1px solid #17141f;
   text-decoration: none;
   color: #17141f;
+  max-width: fit-content;
+  font-size: 3rem;
 
   &:hover {
-    background-color: #17141f20;
     transition: all 0.2s ease-in-out;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 `
 
@@ -30,9 +44,14 @@ const AboutSection = () => {
   return (
     <PortfolioSectionContainer id='portfolio-preview'>
       <PortfolioSectionContent>
-        <h3 style={{ color: '#17141f', padding: '5px', fontWeight: '400' }}>Portfolio Section</h3>
         <PortfolioSlideshow />
-        <Button to='/portfolio'>Full Portfolio</Button>
+        <ButtonContainer>
+          <Button to='/portfolio'>
+            <p>view the</p>
+            <p>Full Portfolio</p>
+            <IoIosArrowRoundForward/>
+          </Button>
+        </ButtonContainer>
       </PortfolioSectionContent>
     </PortfolioSectionContainer>
   )

@@ -7,6 +7,7 @@ const HeroContainer = styled.div`
   display: flex;
   height: 100vh;
   width: 100%;
+  position: relative;
   justify-content: center;
   align-items: center;
   background-image: url(${heroImage});
