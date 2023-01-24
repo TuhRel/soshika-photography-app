@@ -23,7 +23,7 @@ const PortfolioSlideshow = () => {
   `)
 
   return (
-    <Box sx={{width: 'calc(100vw - 20px)', display: 'flex',height: '550px', overflow: 'scroll', alignItems: 'center'}}>
+    <Box sx={{width: '100%', display: 'flex',height: '550px', overflow: 'scroll', alignItems: 'center'}}>
         {data?.allFile?.nodes?.map((image, index) => {
           return (
             <Box key={index}>

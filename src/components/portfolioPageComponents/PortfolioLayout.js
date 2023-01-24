@@ -5,6 +5,8 @@ import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
+import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
@@ -29,6 +31,23 @@ const images = [
   ];
 
 const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, primary, dark, dark2 }) => {
+    const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: {relativeDirectory: {eq: "weddingSlides"}}) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(
+              formats: AUTO, 
+              height: 555,
+              width: 555, 
+              placeholder: BLURRED,
+              layout: FIXED
+            )
+          }
+        }
+      }
+    }
+    `)
 
     const theme = useTheme()
 
@@ -74,11 +93,10 @@ const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, 
                             index={activeStep}
                             onChangeIndex={handleStepChange}
                             enableMouseEvents>
-                                {images.map((step, index) => (
-                                    <div key={step.label}>
+                                {data?.allFile?.nodes?.map((image, index) => (
+                                    <div key={index}>
                                         {Math.abs(activeStep - index) <= 2 ? (
                                         <Box
-                                            component="img"
                                             sx={{
                                             height: 455,
                                             display: 'block',
@@ -87,9 +105,9 @@ const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, 
                                             // objectPosition: '0 80%',
                                             overflow: 'hidden',
                                             width: '100%',
-                                            }}
-                                            src={step.imgPath}
-                                            alt={step.label}/>
+                                            }}>
+                                            <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt='slideshow'/>
+                                            </Box>
                                         ) : null}
                                     </div>
                                 ))}

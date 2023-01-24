@@ -8,13 +8,20 @@ const PortfolioSectionContainer = styled.div`
   display: flex;
   position: relative;
   height: 100vh;
+  padding-top: 80px;
   /* height: calc(100vh - 80px); */
   width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
 `
-const PortfolioSectionContent = styled.div``
+const PortfolioSectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
