@@ -1,16 +1,19 @@
 import * as React from "react"
+import AboutSection2 from "../components/AboutSection2"
+import SubmenuBannerSection from "../components/SubmenuBannerSection"
 import HeroSection from "../components/HeroSection"
 import Layout from "../components/Layout"
-import AboutSection from "../components/AboutSection"
-import ServicesSection from "../components/ServicesSection"
-import PortfolioSection from "../components/PortfolioSection"
+import PortfolioBannerSection from "../components/PortfolioBannerSection"
+import PortfolioSection from "../components/PortfolioSection2"
 
 const Home = () => {
   return (
     <>
       <Layout>
         <HeroSection />
-        <AboutSection />
+        <SubmenuBannerSection />
+        <AboutSection2 />
+        <PortfolioBannerSection />
         <PortfolioSection />
       </Layout>
     </>

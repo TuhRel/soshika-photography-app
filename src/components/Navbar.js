@@ -10,7 +10,7 @@ const Nav = styled.nav`
   padding: 0 50px;
   position: fixed;
   top: 0;
-  background-color: transparent;
+  background-color: #fafafa;
   backdrop-filter: blur(5px);
   z-index: 1100;
 
@@ -54,6 +54,8 @@ const Burger = styled.div`
 `
 const NavMenu = styled.div`
   display: flex;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -69,7 +71,7 @@ const NavMenuItem = styled.div``
 //     border-bottom: 1px solid #17141f;
 //   }
 // `
-const NavScrollLink = styled(LinkS)`
+const NavScrollLink = styled(Link)`
   color: #17141f;
   padding: 15px;
   text-decoration: none;
@@ -119,16 +121,16 @@ const Navbar = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact='true'>
-                  The Photographer
+                  About
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavScrollLink to='services'
+              <NavScrollLink to='/portfolio'
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact='true'>
-                  The Business
+                  Images
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
@@ -137,7 +139,16 @@ const Navbar = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact='true'>
-                  The Portfolio
+                  Details
+              </NavScrollLink>
+            </NavMenuItem>
+            <NavMenuItem>
+              <NavScrollLink to='portfolio-preview'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'>
+                  Contact
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuBtn>

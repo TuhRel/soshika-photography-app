@@ -8,6 +8,7 @@ import aboutImage from '../images/backgroundImages/aboutBackground.jpg'
 
 const AboutContainer = styled.div`
   display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   width: 100%;
@@ -46,6 +47,7 @@ const AboutWrapper = styled.div`
   width: 100%;
   background-color: #f9f9f9;
   margin-top: 8%;
+  margin-bottom: 8%;
 `
 const AboutSectionTitle = styled.div`
   display: flex;
@@ -120,6 +122,12 @@ const AboutSection = () => {
           })}
         </AboutContent>
       </AboutContentWrapper>
+      </AboutWrapper>
+      </AboutBg2>
+      </AboutBg>
+      <AboutBg id='business'>
+      <AboutBg2>
+      <AboutWrapper>
       <AboutSectionTitle>
         <h2>
           About SoShika Photography

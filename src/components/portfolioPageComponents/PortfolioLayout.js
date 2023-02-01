@@ -10,25 +10,25 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
-const images = [
-    {
-        label: 'San Francisco – Oakland Bay Bridge, United States',
-        imgPath: require('../../images/weddingSlides/gabby_wedding_1.webp').default,
-    },
-    {
-        label: 'Bird',
-        imgPath: require('../../images/weddingSlides/gabby_wedding_2.webp').default,
-    },
-    {
-        label: 'Bali, Indonesia',
-        imgPath: require('../../images/weddingSlides/hillary_wedding_1.webp').default,
-    },
-    {
-        label: 'Goč, Serbia',
-        imgPath: require('../../images/weddingSlides/hillary_wedding_2.webp').default,
+// const images = [
+//     {
+//         label: 'San Francisco – Oakland Bay Bridge, United States',
+//         imgPath: require('../../images/weddingSlides/gabby_wedding_1.webp').default,
+//     },
+//     {
+//         label: 'Bird',
+//         imgPath: require('../../images/weddingSlides/gabby_wedding_2.webp').default,
+//     },
+//     {
+//         label: 'Bali, Indonesia',
+//         imgPath: require('../../images/weddingSlides/hillary_wedding_1.webp').default,
+//     },
+//     {
+//         label: 'Goč, Serbia',
+//         imgPath: require('../../images/weddingSlides/hillary_wedding_2.webp').default,
         
-    },
-  ];
+//     },
+//   ];
 
 const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, primary, dark, dark2 }) => {
     const data = useStaticQuery(graphql`
@@ -39,7 +39,7 @@ const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, 
             gatsbyImageData(
               formats: AUTO, 
               height: 555,
-              width: 555, 
+              width: 555,
               placeholder: BLURRED,
               layout: FIXED
             )
@@ -52,12 +52,12 @@ const PortfolioLayout = ({ lightBg, id, imgStart, topLine, lightText, headLine, 
     const theme = useTheme()
 
     const [activeStep, setActiveStep] = useState(0)
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
+    // const handleNext = () => {
+    //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    // };
+    // const handleBack = () => {
+    //     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    // };
     const handleStepChange = (step) => {
         setActiveStep(step);
     };
