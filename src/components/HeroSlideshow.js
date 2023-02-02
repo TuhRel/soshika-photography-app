@@ -15,6 +15,7 @@ const HeroSlideshow = () => {
             height: 500, 
             placeholder: BLURRED)
         }
+        name
       }
     }
   }
@@ -26,7 +27,7 @@ const HeroSlideshow = () => {
       {data?.allFile?.nodes?.map((image, index) => {
         return (
           <Box sx={{maxWidth: '40%', padding: '0px 5px', outline: 'green'}} key={index}>
-            <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt='alt'/>
+            <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt={image?.name}/>
           </Box>
         )
       })}

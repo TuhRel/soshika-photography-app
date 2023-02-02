@@ -7,5 +7,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Noto Serif Display', sans-serif;
+        color: #17141f;
     }
 `

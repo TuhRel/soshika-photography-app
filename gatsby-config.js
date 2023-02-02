@@ -37,15 +37,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "portfolioSlideshow",
-        path: `${__dirname}/src/images/portfolioSlideshow/`,
+        name: "weddingSlides",
+        path: `${__dirname}/src/images/weddingSlides/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "weddingSlides",
-        path: `${__dirname}/src/images/weddingSlides/`,
+        name: "landingPageImages",
+        path: `${__dirname}/src/images/landingPageImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "submenuSectionImages",
+        path: `${__dirname}/src/images/submenuSectionImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "portfolioPageCoverImages",
+        path: `${__dirname}/src/images/portfolioPageCoverImages/`,
       },
     },
     {

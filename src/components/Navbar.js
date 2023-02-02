@@ -29,6 +29,8 @@ const NavContainer = styled.div`
 const NavLogo = styled(Link)`
   color: #17141f;
   text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 `
 const NavMenuContainer = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import HeroSlideshow from './HeroSlideshow';
-import heroImage from '../images/backgroundImages/heroBackground-2.jpg'
+import heroImage from '../images/backgroundImages/lincoln-memorial-engagement.jpg'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -25,14 +25,6 @@ const HeroBg = styled.div`
     backdrop-filter: blur(3px);
     background-color: #f9f9f999;
 `
-const HeroBg2 = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #f9f9f999;
-`
 const HeroContentWrapper = styled.div`
   display: grid;
   width: 95%;
@@ -50,36 +42,40 @@ const HeroText = styled.div`
   align-items: center;
   justify-content: center;
   color: #17141f;
+  padding-left: 20px;
 
   h1 {
     letter-spacing: 2px;
-    font-size: 1rem;
-    font-weight: 200;
-    padding-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding-bottom: 5px;
+    text-transform: uppercase;
   }
   h2 {
     letter-spacing: 2px;
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
   }
   p {
     letter-spacing: 2px;
     padding-top: 50px;
     padding-bottom: 50px;
-    font-weight: 200;
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-transform: uppercase;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 200;
-    line-height: 1.3rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
   }
   h4 {
     font-size: 1.8rem;
     font-weight: 200;
     letter-spacing: 2px;
-    line-height: 3rem;
+    text-transform: uppercase;
   }
 `
 
@@ -89,22 +85,20 @@ const HeroSection = () => {
   return (
     <HeroContainer id='home'>
       <HeroBg>
-      <HeroBg2>
       <HeroContentWrapper>
         <HeroContent>
           <HeroSlideshow />
         </HeroContent>
         <HeroContent style={{paddingTop: '60px'}}>
           <HeroText>
-            <h1>EST.</h1>
+            <h1>Est.</h1>
             <h2>2020</h2>
-            <p>ORLANDO & <br/> LOCAL AREA <br/> PHOTOGRAPHER</p>
-            <h3>SoShika</h3>
-            <h4>Photography</h4>
+            <p>Orlando & <br/> Local Area <br/> Photographer</p>
+            <h3>SoShika<br/>
+            Photography</h3>
           </HeroText>
         </HeroContent>
       </HeroContentWrapper>
-      </HeroBg2>
       </HeroBg>
     </HeroContainer>
   )

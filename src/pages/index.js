@@ -1,10 +1,10 @@
 import * as React from "react"
-import AboutSection2 from "../components/AboutSection2"
 import SubmenuBannerSection from "../components/SubmenuBannerSection"
 import HeroSection from "../components/HeroSection"
 import Layout from "../components/Layout"
 import PortfolioBannerSection from "../components/PortfolioBannerSection"
-import PortfolioSection from "../components/PortfolioSection2"
+import PortfolioSection from "../components/PortfolioMainSection"
+import SubmenuSection from "../components/SubmenuMainSection"
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Layout>
         <HeroSection />
         <SubmenuBannerSection />
-        <AboutSection2 />
+        <SubmenuSection />
         <PortfolioBannerSection />
         <PortfolioSection />
       </Layout>
