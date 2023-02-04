@@ -13,6 +13,24 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "galleries",
+        path: `${__dirname}/src/galleries/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,8 +55,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "weddingSlides",
-        path: `${__dirname}/src/images/weddingSlides/`,
+        name: "weddingImages",
+        path: `${__dirname}/src/images/weddingImages/`,
       },
     },
     {
@@ -60,6 +78,34 @@ module.exports = {
       options: {
         name: "portfolioPageCoverImages",
         path: `${__dirname}/src/images/portfolioPageCoverImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "brandingImages",
+        path: `${__dirname}/src/images/brandingImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "coupleImages",
+        path: `${__dirname}/src/images/coupleImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "graduationImages",
+        path: `${__dirname}/src/images/graduationImages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "maternityImages",
+        path: `${__dirname}/src/images/maternityImages/`,
       },
     },
     {
