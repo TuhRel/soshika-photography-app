@@ -61,15 +61,22 @@ const ImageText = styled(Link)`
 const PortfolioSection = () => {
   const data = useStaticQuery(graphql`
   query {
-    allFile(filter: {relativeDirectory: {eq: "landingPageImages"}}) {
+    allMarkdownRemark(sort: {frontmatter: {order: ASC}}, limit: 3) {
       nodes {
-        childImageSharp {
-          gatsbyImageData(
-            formats: AUTO, 
-            height: 700, 
-            placeholder: BLURRED)
+        frontmatter {
+          thumb {
+            childImageSharp {
+              gatsbyImageData(
+                formats: AUTO, 
+                height: 700, 
+                placeholder: BLURRED)
+            }
+          }
+          category
+          order
+          slug
         }
-        name
+        id
       }
     }
   }
@@ -78,14 +85,13 @@ const PortfolioSection = () => {
   return (
     <PortfolioContainer>
       <PortfolioContent>
-        {data?.allFile?.nodes?.map((image, index) => {
+        {data?.allMarkdownRemark?.nodes?.map(image => {
           return (
-            <PortfolioBox index={index}>
-              <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt='alt'/>
-                <ImageText to='/portfolio'>
+            <PortfolioBox key={image?.id}>
+              <GatsbyImage image={image?.frontmatter?.thumb?.childImageSharp?.gatsbyImageData} alt={image?.frontmatter?.category}/>
+                <ImageText to={'/portfolio/' + image?.frontmatter?.slug}>
                   <h6>view</h6>
-                  <p>{image?.name}</p>
-                  {/* {index === 0 ? <p>wedding</p> : index === 1 ? <p>portrait</p> : <p>graduation</p>} */}
+                  <p>{image?.frontmatter?.category}</p>
                 </ImageText>
             </PortfolioBox>
           )
