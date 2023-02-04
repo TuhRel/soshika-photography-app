@@ -64,6 +64,11 @@ const TextBox = styled(Link)`
   text-decoration: none;
   color: #17141f;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: ease-in-out .2s;
+  }
 `
 const SubmenuSection = () => {
   const data = useStaticQuery(graphql`
