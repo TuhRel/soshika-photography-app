@@ -88,7 +88,7 @@ export default Portfolio;
 
 export const portfolioPageData = graphql`
   query PortfolioPage {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {frontmatter: {order: ASC}}) {
       nodes {
         frontmatter {
           title
