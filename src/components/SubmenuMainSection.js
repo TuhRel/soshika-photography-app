@@ -94,7 +94,7 @@ const SubmenuSection = () => {
           <GatsbyImage image={data?.allFile?.nodes[0]?.childImageSharp?.gatsbyImageData} alt={data?.allFile?.nodes[0]?.name} />
         </ImageBox>
         <MenuBox>
-          <TextBox to='/'>
+          <TextBox to='/about'>
             <h1>About Me</h1>
             <p>Get to know the photographer</p>
             <ArrowRight />
