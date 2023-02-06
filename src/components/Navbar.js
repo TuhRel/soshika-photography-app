@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import { FaBars } from 'react-icons/fa'
 
 const Nav = styled.nav`
@@ -118,20 +118,12 @@ const Navbar = ({ toggle }) => {
           </Burger>
           <NavMenu>
             <NavMenuItem>
-              <NavScrollLink to='about'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'>
+              <NavScrollLink to='/about'>
                   About
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavScrollLink to='/portfolio'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'>
+              <NavScrollLink to='/portfolio'>
                   Images
               </NavScrollLink>
             </NavMenuItem>
