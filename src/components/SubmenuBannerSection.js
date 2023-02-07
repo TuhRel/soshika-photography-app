@@ -8,6 +8,7 @@ const SubmenuBannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
+  pointer-events: none;
 `
 const BannerHeader = styled.div`
   display: flex;
