@@ -25,9 +25,17 @@ const IconLinks = styled.a`
 `
 const Instagram = styled(FaInstagram)`
   color: #17141f;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 const Facebook = styled(FaFacebook)`
   color: #17141f;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 const Footer = () => {
@@ -48,7 +56,7 @@ const Footer = () => {
                 <Facebook/>
             </IconLinks>
         </FooterContent>
-        <FooterContent>
+        <FooterContent style={{pointerEvents: 'none'}}>
           Copyright 2022 SoShika Photography, LLC ©
         </FooterContent>
       </FooterContainer>
