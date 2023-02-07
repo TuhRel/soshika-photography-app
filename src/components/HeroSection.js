@@ -43,6 +43,7 @@ const HeroText = styled.div`
   justify-content: center;
   color: #17141f;
   padding-left: 20px;
+  pointer-events: none;
 
   h1 {
     letter-spacing: 2px;
