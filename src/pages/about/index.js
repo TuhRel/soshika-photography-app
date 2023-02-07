@@ -10,7 +10,6 @@ const AboutContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  margin-top: 80px;
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
@@ -20,6 +19,7 @@ const AboutContentWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   width: 80%;
   grid-gap: 10px;
+  margin-top: 100px;
   justify-content: center;
   align-items: center;
 `
