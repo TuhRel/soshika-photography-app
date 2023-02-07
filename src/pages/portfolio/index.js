@@ -12,21 +12,22 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
+  padding: 10px;
 `
 const PortfolioWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `
 const PortfolioContent = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 600px;
-  width: 90%;
-  margin-top: 40px;
-  padding: 50px;
+  width: 100%;
+  grid-gap: 25px;
   justify-content: center;
   align-items: center;
 `
@@ -52,6 +53,7 @@ const ImageText = styled.div`
   letter-spacing: 2px;
   width: 100%;
   text-align: center;
+  pointer-events: none;
 `
 
 
