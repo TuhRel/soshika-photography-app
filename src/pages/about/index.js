@@ -44,7 +44,7 @@ const AboutContent = styled.div`
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-color: #556b2f90;
+  background-color: #556b2f40;
 `
 const AboutText = styled.div`
   display: flex;
