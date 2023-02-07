@@ -29,12 +29,11 @@ const GalleryTitle = styled.div`
 `
 const GalleryContent = styled.div`
   display: grid;
-  /* width: 100%; */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   align-items: center;
   justify-content: center;
-  /* padding: 10px; */
+  grid-gap: 20px;
 `
 const ImageBox = styled(Box)`
   display: flex;
@@ -42,8 +41,10 @@ const ImageBox = styled(Box)`
   object-fit: cover;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  padding: 10px;
+  max-height: 440px;
+  max-width: 330px;
+  object-fit: cover;
+  overflow: hidden;
 `
 
 const PortfolioGallery = ({ data }) => {
@@ -84,7 +85,7 @@ export const gallery = graphql`
         childImageSharp {
           gatsbyImageData(
             formats: AUTO, 
-            height: 450, 
+            height: 500, 
             placeholder: BLURRED)
         }
         id
