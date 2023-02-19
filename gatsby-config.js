@@ -109,6 +109,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "publishImages",
+        path: `${__dirname}/src/images/publishImages/`,
+      },
+    },
+    {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
@@ -121,5 +128,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-mongodb',
+      options: {
+          dbName: 'sjphotography',
+          collection: 'customers',
+      }
+  },
   ],
 }

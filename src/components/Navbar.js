@@ -118,35 +118,32 @@ const Navbar = ({ toggle }) => {
           </Burger>
           <NavMenu>
             <NavMenuItem>
+              <NavScrollLink to='/'>
+                  Home
+              </NavScrollLink>
+            </NavMenuItem>
+            <NavMenuItem>
               <NavScrollLink to='/about'>
                   About
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
               <NavScrollLink to='/portfolio'>
-                  Images
+                  Portfolio
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavScrollLink to='portfolio-preview'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'>
+              <NavScrollLink to='/details'>
                   Details
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuItem>
-              <NavScrollLink to='portfolio-preview'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'>
+              <NavScrollLink to='/contact'>
                   Contact
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuBtn>
-              <NavBtnLink to='/book-now'>Get a Quote</NavBtnLink>
+              <NavBtnLink to='/book-now'>Ready to Book</NavBtnLink>
             </NavMenuBtn>
           </NavMenu>
         </NavMenuContainer>

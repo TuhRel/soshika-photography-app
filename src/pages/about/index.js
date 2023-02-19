@@ -19,7 +19,7 @@ const AboutContentWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   width: 80%;
   grid-gap: 10px;
-  margin-top: 100px;
+  margin-top: 120px;
   justify-content: center;
   align-items: center;
 `

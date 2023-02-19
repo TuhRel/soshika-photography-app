@@ -104,7 +104,7 @@ const SubmenuSection = () => {
             <p>View the galleries</p>
             <ArrowRight />
           </TextBox>
-          <TextBox to='/'>
+          <TextBox to='/details'>
             <h1>Information</h1>
             <p>Processes and Pricing</p>
             <ArrowRight />

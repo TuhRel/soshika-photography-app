@@ -23,7 +23,8 @@ const HeroBg = styled.div`
     width: 100%;
     height: 100vh;
     backdrop-filter: blur(3px);
-    background-color: #f9f9f999;
+    background-color: #f9f9f970;
+    /* box-shadow: inset 0 0 0 1000px #ffffff50; */
 `
 const HeroContentWrapper = styled.div`
   display: grid;
