@@ -87,7 +87,7 @@ const NavScrollLink = styled(Link)`
 const NavMenuBtn = styled.div`
   padding-left: 15px;
 `
-const NavBtnLink = styled(Link)`
+const NavBtnLink = styled.a`
   padding: 10px;
   border: 1px solid #17141f;
   text-decoration: none;
@@ -143,7 +143,11 @@ const Navbar = ({ toggle }) => {
               </NavScrollLink>
             </NavMenuItem>
             <NavMenuBtn>
-              <NavBtnLink to='/book-now'>Ready to Book</NavBtnLink>
+              <NavBtnLink 
+                href='https://app.squarespacescheduling.com/schedule.php?owner=25043538' 
+                target={'_blank'}>
+                  Ready to Book
+              </NavBtnLink>
             </NavMenuBtn>
           </NavMenu>
         </NavMenuContainer>

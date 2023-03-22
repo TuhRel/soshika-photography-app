@@ -8,6 +8,12 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  proxy: [
+    {
+      prefix: '/customers',
+      url: 'http://localhost:5000',
+    },
+  ],
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,

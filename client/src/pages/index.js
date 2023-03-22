@@ -7,6 +7,7 @@ import PortfolioSection from "../components/PortfolioMainSection"
 import SubmenuSection from "../components/SubmenuMainSection"
 
 const Home = () => {
+
   return (
     <>
       <Layout>

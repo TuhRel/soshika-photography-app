@@ -122,7 +122,7 @@ const Details = ({ data }) => {
                 Weddings
               </ServiceTitle>
               <ServiceSubtitle>
-                Starting at $1200
+                Starting at $950
               </ServiceSubtitle>
               <ServiceText>
                 Everyone loves airedale goat. Ricotta stinking bishop danish fontina red leicester macaroni cheese port-salut chalk and cheese rubber cheese. Airedale babybel lancashire cut the cheese ricotta fondue cheese slices red leicester.
@@ -133,7 +133,7 @@ const Details = ({ data }) => {
                 Graduation
               </ServiceTitle>
               <ServiceSubtitle>
-                Starting at $300
+                Starting at $200
               </ServiceSubtitle>
               <ServiceText>
                 Everyone loves airedale goat. Ricotta stinking bishop danish fontina red leicester macaroni cheese port-salut chalk and cheese rubber cheese. Airedale babybel lancashire cut the cheese ricotta fondue cheese slices red leicester.
@@ -144,7 +144,7 @@ const Details = ({ data }) => {
                 Portrait
               </ServiceTitle>
               <ServiceSubtitle>
-                Starting at $500
+                Starting at $280
               </ServiceSubtitle>
               <ServiceText>
                 Everyone loves airedale goat. Ricotta stinking bishop danish fontina red leicester macaroni cheese port-salut chalk and cheese rubber cheese. Airedale babybel lancashire cut the cheese ricotta fondue cheese slices red leicester.

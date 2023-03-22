@@ -8,7 +8,7 @@ import Box from '@mui/material/Box'
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   justify-content: center;
   align-items: center;

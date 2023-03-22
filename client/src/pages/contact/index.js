@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import Layout from '../../components/Layout'
 import ContactUs from '../../components/ContactForm'
 import contactImage from '../../images/backgroundImages/contact-form-image.jpg'
 import { StaticImage } from 'gatsby-plugin-image'
+import axios from 'axios'
 
 
 const ContactContainer = styled.div`

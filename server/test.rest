@@ -1,0 +1,31 @@
+GET http://localhost:5000/customers
+
+###
+
+GET http://localhost:5000/customers/63face9691eb1b27f792b9c3
+
+###
+
+POST http://localhost:5000/customers
+Content-Type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Wo",
+  "email": "joe@wo.com",
+  "phone": "1234567890",
+  "customerMessage": "I would like to book an appointment."
+}
+
+###
+
+DELETE http://localhost:5000/customers/63fbd6d95b0f7b90f2d78ddd
+
+###
+
+PATCH http://localhost:5000/customers/63faced791eb1b27f792b9c4
+Content-Type: application/json
+
+{
+  "phone": 8139474993
+}
